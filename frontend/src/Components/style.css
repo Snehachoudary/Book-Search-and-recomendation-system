@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #755139FF;
+  --secondary-color: #D4B996FF;
+}
+
+body {
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 75.5%;
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  background-color: #D4B996FF; /* Using secondary color for navbar */
+  padding: 30px 80px; /* Added padding to the navbar */
+  display: flex;
+  font-size: medium;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed; /* Fixed position for sticky navbar */
+  top: 0; /* Position at the top of the page */
+  z-index: 10; /* Ensure navbar stays on top of other elements */
+}
+
+.navbar a {
+  color: var(--primary-color); /* Text color */
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px; /* Space between navbar items */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styling */
+.header {
+  width: 100%;
+  height: 500px;
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column; /* Changed to column layout for content */
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+  background: var(--primary-color);
+  margin-top: 70px; /* Add space for the navbar */
+}
+
+.header h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.header .right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.header .right-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.header .right-section .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header .right-section .search input {
+  outline: 0;
+  border: 0;
+  width: 350px;
+  height: 35px;
+  padding: 0 0.5rem;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px 0 0 5px;
+}
+
+.header .right-section .search button {
+  outline: none;
+  border: none;
+  height: 35px;
+  padding: 0 0.5rem;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.header .right-section img {
+  width: 250px;
+  position: absolute;
+  bottom: -100px;
+  right: -50px;
+}
+
+/* Container and Card Styling */
+.container {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 5px rgba(212, 185, 150, 0.5);
+  transition: 0.5s;
+  text-align: center;
+  width: calc(25% - 20px); /* Reduced card size */
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: scale(0.9);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card img {
+  width: 100%;
+  height: 270px; /* Reduced image height */
+  border-radius: 1rem 1rem 0 0; /* Maintain aspect ratio and cover the entire container */
+}
+
+.card .bottom {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card .bottom .title {
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.card .bottom .amount {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+/* Overlay Styling */
+.overlay {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-inner {
+  background: white;
+  width: 700px;
+  height: 550px;
+  padding: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 1.3rem;
+}
+
+.overlay-inner .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  background-color: transparent;
+}
+
+.overlay-inner .inner-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay-inner .inner-box img {
+  margin-right: 20px;
+  width: 150px;
+  height: 200px;
+}
+
+.overlay-inner .inner-box h3 {
+  margin-top: 10px;
+  color: green;
+}
+
+.overlay-inner .inner-box h4 {
+  color: blue;
+}
+
+.overlay-inner .inner-box button {
+  outline: none;
+  border: none;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #24a0ed;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.overlay-inner .description {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 13px;
+}

@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body ,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1404f2; /* Background color for the entire viewport */
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-wrapper {
+    position: relative;
+    width: 420px;
+    height: 450px;
+    background: seagreen;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+.login-wrapper.active {
+    height: 520px;
+}
+
+.login-wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.login-wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.login-wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.login-wrapper .form-box.register {
+    position: absolute;
+    transition: transform .18s ease;
+    transform: translateX(400px);
+}
+
+.login-wrapper.active .form-box.register {
+    transform: translateX(0);
+}
+
+.login-wrapper form h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.login-wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.login-wrapper .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 45px 0 20px;
+    box-sizing: border-box;
+}
+
+.login-wrapper .input-box input::placeholder {
+    color: #fff;
+}
+
+.login-wrapper .input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+.login-wrapper .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.login-wrapper .remember-forget label input {
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.login-wrapper .remember-forget a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-wrapper .remember-forget a:hover {
+    text-decoration: underline;
+}
+
+.login-wrapper button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+.lot-size: 14.5px;
+    text-align: center;
+    margin-top: 15px;
+    color: gin-wrapper .register-link {
+    fon#fff;
+}
+
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  a:hover {
+    color: #23527c;
+  }
+  
+  /* Login Wrapper Container */
+  
+  .login-wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Login Wrapper */
+  
+  .login-wrapper {
+    position: relative;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .login-wrapper.active {
+    transform: translateX(100%);
+  }
+  
+  /* Form Box */
+  
+  .form-box {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-box.login {
+    width: 100%;
+  }
+  
+  .form-box.register {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Input Box */
+  
+  .input-box {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .input-box input[type="text"],
+  .input-box input[type="email"],
+  .input-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-box.icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #337ab7;
+  }
+  
+  /* Remember Forget */
+  
+  .remember-forget {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .remember-forget label {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .remember-forget a {
+    font-size: 14px;
+    color: #337ab7;
+  }
+  
+  /* Error Message */
+  
+  .error {
+    color: #red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Button */
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #23527c;
+  }
+  
+  /* Register Link */
+  
+  .register-link {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .register-link a {
+    font-size: 14px;
+    color: #337ab7;
+  }
+  
+  .register-link a:hover {
+    color: #23527c;
+  }
+
+
+  /* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  a:hover {
+    color: #23527c;
+  }
+  
+  /* Login Wrapper Container */
+  
+  .login-wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Login Wrapper */
+  
+  .login-wrapper {
+    position: relative;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .login-wrapper.active {
+    transform: translateX(-100%);
+  }
+  
+  /* Form Box */
+  
+  .form-box {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Add this line to center the form */
+  }
+  
+  .form-box.login {
+    width: 100%;
+  }
+  
+  .form-box.register {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Add this line to center the form */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    display: none; /* Hide the registration form by default */
+  }
+  
+  .login-wrapper.active .form-box.login {
+    display: none; /* Hide the login form when the user clicks on "Sign Up" */
+  }
+  
+  .login-wrapper.active .form-box.register {
+    display: block; /* Show the registration form when the user clicks on "Sign Up" */
+    transform: translateX(0); /* Move the registration form to the left */
+  }
+  
+  /* Input Box */
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .input-box i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: #337ab7;
+  }
+  
+  /* Remember and Forget Password */
+  
+  .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .remember-forget label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .remember-forget a {
+    font-size: 14px;
+    color: #337ab7;
+  }
+  
+  /* Button */
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #337ab7;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #23527c;
+  }
+  
+  /* Register Link */
+  
+  .register-link {
+    font-size: 14px;
+    color: #337ab7;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .register-link a {
+    font-size: 14px;
+    color: #337ab7;
+  }
+
+
+
+  /* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  a:hover {
+    color: #23527c;
+  }
+  
+  /* Login Wrapper Container */
+  
+  .login-wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Login Wrapper */
+  
+  .login-wrapper {
+    position: relative;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .login-wrapper.active {
+    transform: translateX(-100%);
+  }
+  
+  /* Form Box */
+  
+  .form-box {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Add this line to center the form */
+    width: 100%; /* Add this line to make the form full width */
+  }
+  
+  .form-box.login {
+    width: 100%;
+  }
+  
+  .form-box.register {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Add this line to center the form */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    display: none; /* Hide the registration form by default */
+  }
+  
+  .login-wrapper.active.form-box.login {
+    display: none; /* Hide the login form when the user clicks on "Sign Up" */
+  }
+  
+  .login-wrapper.active.form-box.register {
+    display: block; /* Show the registration form when the user clicks on "Sign Up" */
+    transform: translateX(0); /* Move the registration form to the center */
+  }
+  
+  /* Input Box */
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .input-box i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: #337ab7;
+  }
+  
+  /* Remember and Forget Password */
+  
+  .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .remember-forget label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .remember-forget a {
+    font-size: 14px;
+    color: #337ab7;
+  }
+  
+  /* Button */
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #337ab7;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #23527c;
+  }
+  
+  /* Register Link */
+  
+  .register-link {
+    font-size: 14px;
+    color: #337ab7;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .register-link a {
+    font-size: 14px;
+    color: #337ab7;
+  }
